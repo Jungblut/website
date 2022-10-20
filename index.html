@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#ffffff" />
     <title>Jungblut.io | Home</title>
+    <link rel="icon" type="image/x-icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAACsElEQVR4nGLRn3CbgZaAiaamMzAwsJCnjYOF0UGJ21KeS12EXYCTmZuNce3lTxOOvqWCBdxsjAnGgpH6/DzszMji9979wqqeNAuMpDjaPMQleFkxpS6/+IFVCwlx4KHGMzNIBmL62affkaW+/Pz74P1viizQlWBvdpNgBYfKmssf551+jyx77dXP/zg0EmUBIyNDnbMYxPQH7351HHitK8GOrABX+BBrgbEUh6oI1MRVlz7++cegK8GBrODqy58UWaAljnDvmaffGRkYdFAtuEKhD/4hBfC7b3/lBVn5ORBp9NWXP6++/qXIgjNPEGmGg5VRXxLF+XgigFgLbrz+1bH/9eefIGdaynFhRAA+C4jNaCsufVx9+aMIN8vXX/9CdPmRpa68wBnDpGW0v/8ZXn758/f/fxVhRJz/Y2C4+oriIEIGOuIczEiaHrz9+fUXrkxGlgVoWQxPDiDTAj3UGL6MN4bJ8oEkWhajqg9k+FiEuRAJ79fff7ffUNUCNOffePXr9z8CWvDlAzZmRhcVblkB1t9/Gc4/+37+2Q+0LHaFUATgs0CKj2VagJSCIBtcpPfQaz2iyzjCFjS6iCGbzsDAEKrLL8mHInL+2XeCFmCPAzkBFlNZLgj72+9/Jx99+/zzrzQ/GytSPX//3a/nn3EWogR8oCSEcGnW+mcXnv8Q5WaeHiiFXEhsu/GZoOk4ffAFVsX+h8Xk669/kWuFr7/+rbnykXwLrr/68eMPKAEyMjBkmAvJ8LOkmQmqiSCcP+HIm/ffCaVQMGDE1TZNNxfMtBDGFP/HwDDj+NtZp94TYzq+VDTz5PtPP/+lmgoKwbLu778Mxx5+nXv63SVCxQMywOkDqDQDg4IgKw8789df/558/P3rL76SGSsgUKP9Z2C4D2qyYW+1EQMAAQAA//8nFvpoSt4EwwAAAABJRU5ErkJggg==">
     <meta name="robots" content="index, follow">
+    <script src="https://kit.fontawesome.com/5151bf2561.js" crossorigin="anonymous"></script>
     <style>
         html,
         body {
@@ -20,6 +23,11 @@
             font-size: 5em;
         }
 
+        svg {
+            font-size: 5em;
+            color: black;
+        }
+
         .box {
             display: flex;
             flex-direction: column;
@@ -27,25 +35,41 @@
             justify-content: center;
             height: 100%;
         }
+
+        .custom-fa {
+            --fa-animation-duration: 3s;
+            --fa-animation-iteration-count: 1;
+        }
+
+        .row {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .col {
+            margin: 1em;
+        }
     </style>
-    <script src="https://kit.fontawesome.com/5151bf2561.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="box">
         <h1>Jungblut.io</h1>
-        <p>
+        <h2>
             Get in touch
-        </p>
-        <p>
-            <a href="https://www.linkedin.com/in/thomas-jungblut/" target="_blank">
-                <i class="fa-brands fa-linkedin"> </i>
-            </a>
-            <a href="mailto:thomas@jungblut.io" target="_blank">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-
-        </p>
+        </h2>
+        <div class="row">
+            <div class="col">
+                <a href="https://www.linkedin.com/in/thomas-jungblut/" target="_blank">
+                    <i class="fa-brands fa-linkedin-in fa-shake custom-fa"></i>
+                </a>
+            </div>
+            <div class="col">
+                <a href="mailto:thomas@jungblut.io" target="_blank">
+                    <i class="fa-solid fa-envelope fa-shake custom-fa"></i>
+                </a>
+            </div>
+        </div>
     </div>
 
 </body>
