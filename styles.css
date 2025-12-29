@@ -21,6 +21,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -105,6 +106,8 @@ header {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .hero-video-container {
@@ -220,6 +223,8 @@ header {
     padding: 6rem 2rem;
     position: relative;
     overflow: hidden;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .product-section::before {
@@ -461,6 +466,9 @@ header {
 .capabilities-section {
     padding: 6rem 2rem;
     background: var(--color-white);
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .capabilities-header {
@@ -536,6 +544,9 @@ header {
     padding: 6rem 2rem;
     background: var(--color-black);
     color: var(--color-white);
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .services-container {
@@ -653,6 +664,12 @@ header {
 /* ====================== */
 /* IMPRINT PAGE           */
 /* ====================== */
+
+/* Disable scroll-snap on pages with imprint content */
+html:has(.imprint-page) {
+    scroll-snap-type: none;
+}
+
 .imprint-page {
     min-height: calc(100vh - 200px);
     padding: 8rem 2rem 4rem;
@@ -707,6 +724,7 @@ footer {
     background: var(--color-black);
     color: var(--color-white);
     padding: 4rem 2rem;
+    scroll-snap-align: end;
 }
 
 .footer-content {

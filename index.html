@@ -32,11 +32,16 @@
     <section class="hero">
         <div class="hero-video-container">
             <video class="hero-video" id="hero-video" autoplay muted loop playsinline>
-                <source src="public/header_v3.mp4" type="video/mp4">
+                <!-- Source set dynamically based on screen resolution -->
             </video>
         </div>
         <script>
-            document.getElementById('hero-video').playbackRate = 0.75;
+            (function() {
+                const video = document.getElementById('hero-video');
+                const isHighRes = window.innerWidth >= 1440 || window.devicePixelRatio >= 2;
+                video.src = isHighRes ? 'public/header_v4.mp4' : 'public/header_v3.mp4';
+                video.playbackRate = 0.75;
+            })();
         </script>
         
         <div class="hero-content">
@@ -81,12 +86,12 @@
                     <span class="feature-tag">Edge Computing</span>
                     <span class="feature-tag">Open Protocol</span>
                 </div>
-                <button class="cta-button">
+                <a href="https://calendar.app.google/NFAHjasURCFa2EjV9" target="_blank" class="cta-button">
                     Learn More
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
-                </button>
+                </a>
             </div>
         </div>
     </section>
