@@ -456,6 +456,201 @@ header {
 }
 
 /* ====================== */
+/* CAPABILITIES SECTION   */
+/* ====================== */
+.capabilities-section {
+    padding: 6rem 2rem;
+    background: var(--color-white);
+}
+
+.capabilities-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-gray);
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.capability-card {
+    background: var(--color-silver);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s var(--ease-out-expo);
+}
+
+.capability-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.capability-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.5rem;
+}
+
+.capability-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--color-black);
+}
+
+.capability-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+}
+
+.capability-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-black-soft);
+}
+
+/* ====================== */
+/* SERVICES SECTION       */
+/* ====================== */
+.services-section {
+    padding: 6rem 2rem;
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.services-content .product-label {
+    background: rgba(255,255,255,0.1);
+    color: var(--color-accent);
+}
+
+.services-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.services-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+}
+
+.services-list {
+    list-style: none;
+    margin-bottom: 2.5rem;
+}
+
+.services-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255,255,255,0.85);
+    font-size: 1rem;
+}
+
+.services-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    background: var(--color-white);
+    border-radius: 50%;
+}
+
+.services-section .cta-button {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.services-section .cta-button:hover {
+    box-shadow: 0 10px 40px rgba(255,255,255,0.2);
+}
+
+.services-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.integration-graphic {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 320px;
+}
+
+.integration-layer {
+    padding: 1.25rem 2rem;
+    border-radius: 12px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    transition: transform 0.3s var(--ease-out-expo);
+}
+
+.integration-layer:hover {
+    transform: translateX(8px);
+}
+
+.layer-1 {
+    background: rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.5);
+}
+
+.layer-2 {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.65);
+}
+
+.layer-3 {
+    background: rgba(255,255,255,0.2);
+    color: var(--color-white);
+    font-size: 1.1rem;
+}
+
+.layer-4 {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+/* ====================== */
 /* IMPRINT PAGE           */
 /* ====================== */
 .imprint-page {
@@ -610,6 +805,31 @@ footer {
     
     .product-features {
         justify-content: center;
+    }
+    
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    
+    .services-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .services-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .services-list {
+        text-align: left;
+        display: inline-block;
+    }
+    
+    .services-visual {
+        order: -1;
     }
 }
 
