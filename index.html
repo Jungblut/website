@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ffffff">
     <title>Jungblut Robotics | Connected Intelligence</title>
-    <meta name="description" content="Jungblut Robotics builds connectivity solutions for robot-to-robot intelligence. Using frontier computer vision and language models to enable effective robotic communication.">
+    <meta name="description"
+        content="Jungblut Robotics builds connectivity solutions for robot-to-robot intelligence. Using frontier computer vision and language models to enable effective robotic communication.">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Fonts: Syne for headers (geometric, futuristic), Outfit for body (clean, modern) -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -27,7 +30,7 @@
         </a>
         <a href="https://calendar.app.google/NFAHjasURCFa2EjV9" target="_blank" class="header-cta">Contact Sales</a>
     </header>
-    
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-video-container">
@@ -36,25 +39,32 @@
             </video>
         </div>
         <script>
-            (function() {
+            (function () {
                 const video = document.getElementById('hero-video');
-                const isHighRes = window.innerWidth >= 1440 || window.devicePixelRatio >= 2;
-                video.src = isHighRes ? 'public/header_v4.mp4' : 'public/header_v3.mp4';
+                const isMobile = window.innerWidth <= 600;
+
+                if (isMobile) {
+                    video.src = 'public/mobile.mp4';
+                } else {
+                    const isHighRes = window.innerWidth >= 1440 || window.devicePixelRatio >= 2;
+                    video.src = isHighRes ? 'public/header_v4.mp4' : 'public/header_v3.mp4';
+                }
+
                 video.playbackRate = 0.75;
             })();
         </script>
-        
+
         <div class="hero-content">
             <h1 class="hero-tagline">Connected<br>Intelligence</h1>
             <p class="hero-subtitle">The nervous system for autonomous fleets.</p>
         </div>
-        
+
         <a href="#product" class="scroll-indicator">
             <span>Discover</span>
             <div class="scroll-arrow"></div>
         </a>
     </section>
-    
+
     <!-- Product Section -->
     <section id="product" class="product-section">
         <div class="product-container">
@@ -72,13 +82,15 @@
                     <div class="connection-node node-4"></div>
                 </div>
             </div>
-            
+
             <div class="product-content">
                 <span class="product-label">New Product Launch</span>
                 <h2 class="product-name">R<sup>3</sup>L1nk</h2>
                 <p class="product-tagline">Robot-to-Robot Relay Link</p>
                 <p class="product-description">
-                    The communication backbone for the robotic age. R³L1nk enables autonomous machines to share perception, coordinate actions, and solve problems together—transforming individual robots into a collective intelligence network.
+                    The communication backbone for the robotic age. R³L1nk enables autonomous machines to share
+                    perception, coordinate actions, and solve problems together—transforming individual robots into a
+                    collective intelligence network.
                 </p>
                 <div class="product-features">
                     <span class="feature-tag">Real-time Sync</span>
@@ -88,61 +100,69 @@
                 </div>
                 <a href="https://calendar.app.google/NFAHjasURCFa2EjV9" target="_blank" class="cta-button">
                     Learn More
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
             </div>
         </div>
     </section>
-    
+
     <!-- Capabilities Section -->
     <section class="capabilities-section">
         <div class="capabilities-header">
             <h2 class="section-title">Core Technology</h2>
             <p class="section-subtitle">The building blocks of robotic intelligence</p>
         </div>
-        
+
         <div class="capabilities-grid">
             <div class="capability-card">
                 <div class="capability-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="3"/>
-                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                     </svg>
                 </div>
                 <h3>Computer Vision & NLP</h3>
-                <p>Frontier perception systems combining visual understanding with natural language processing for seamless human-robot and robot-robot interaction.</p>
+                <p>Frontier perception systems combining visual understanding with natural language processing for
+                    seamless human-robot and robot-robot interaction.</p>
             </div>
-            
+
             <div class="capability-card">
                 <div class="capability-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="5" r="3"/>
-                        <circle cx="5" cy="19" r="3"/>
-                        <circle cx="19" cy="19" r="3"/>
-                        <path d="M12 8v4M8.5 14.5L5.5 16.5M15.5 14.5l3 2"/>
-                        <circle cx="12" cy="14" r="2"/>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="5" r="3" />
+                        <circle cx="5" cy="19" r="3" />
+                        <circle cx="19" cy="19" r="3" />
+                        <path d="M12 8v4M8.5 14.5L5.5 16.5M15.5 14.5l3 2" />
+                        <circle cx="12" cy="14" r="2" />
                     </svg>
                 </div>
                 <h3>AI Planning & Graph Routing</h3>
-                <p>Intelligent path planning and decision-making through advanced graph-based algorithms that optimize multi-agent coordination in real-time.</p>
+                <p>Intelligent path planning and decision-making through advanced graph-based algorithms that optimize
+                    multi-agent coordination in real-time.</p>
             </div>
-            
+
             <div class="capability-card">
                 <div class="capability-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="3" width="20" height="14" rx="2"/>
-                        <path d="M8 21h8M12 17v4"/>
-                        <path d="M7 8h2M7 11h4"/>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                        <path d="M7 8h2M7 11h4" />
                     </svg>
                 </div>
                 <h3>Autonomous Operating Systems</h3>
-                <p>Purpose-built OS foundations for autonomous machines—reliable, secure, and designed for the unique demands of robotic workloads.</p>
+                <p>Purpose-built OS foundations for autonomous machines—reliable, secure, and designed for the unique
+                    demands of robotic workloads.</p>
             </div>
         </div>
     </section>
-    
+
     <!-- Services Section -->
     <section class="services-section">
         <div class="services-container">
@@ -150,7 +170,8 @@
                 <span class="product-label">Services</span>
                 <h2 class="services-title">Hardware Integration</h2>
                 <p class="services-description">
-                    Already have a robot fleet? We provide end-to-end integration services to bring connected intelligence to your existing hardware stack—without starting from scratch.
+                    Already have a robot fleet? We provide end-to-end integration services to bring connected
+                    intelligence to your existing hardware stack—without starting from scratch.
                 </p>
                 <ul class="services-list">
                     <li>Custom SDK integration for proprietary platforms</li>
@@ -160,8 +181,9 @@
                 </ul>
                 <a href="https://calendar.app.google/NFAHjasURCFa2EjV9" target="_blank" class="cta-button">
                     Schedule a Consultation
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
             </div>
@@ -175,7 +197,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -183,12 +205,12 @@
                 <img src="public/jungblut_io_logo.jpg" alt="Jungblut Robotics" class="footer-logo">
                 <span class="footer-company">Jungblut Robotics</span>
             </div>
-            
+
             <nav class="footer-links">
                 <a href="imprint.html">Imprint</a>
                 <a href="mailto:thomas@jungblut.io">Contact</a>
             </nav>
-            
+
             <p class="footer-copyright">
                 © 2025 Jungblut Robotics. All rights reserved.
             </p>
