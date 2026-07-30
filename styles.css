@@ -460,6 +460,182 @@ header {
     transform: translateX(4px);
 }
 
+/* VLA triad graphic */
+.vla-graphic {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.vla-orbit {
+    position: absolute;
+    border: 1.5px solid var(--color-black);
+    border-radius: 50%;
+    opacity: 0.12;
+}
+
+.orbit-1 {
+    inset: 8%;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.orbit-2 {
+    inset: 22%;
+    animation: pulse 4s ease-in-out 0.8s infinite;
+}
+
+.vla-core {
+    position: absolute;
+    inset: 38%;
+    background: var(--color-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.06);
+    animation: coreGlow 3s ease-in-out infinite;
+}
+
+.vla-core-label {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-white);
+}
+
+@keyframes coreGlow {
+    0%, 100% { box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.06); }
+    50% { box-shadow: 0 0 0 14px rgba(0, 0, 0, 0.1); }
+}
+
+.vla-node {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    background: var(--color-white);
+    border: 1.5px solid var(--color-silver-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    animation: nodeFloat 5s ease-in-out infinite;
+}
+
+.vla-node span {
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+
+.node-vision {
+    top: 2%;
+    left: 50%;
+    margin-left: -38px;
+}
+
+.node-language {
+    bottom: 8%;
+    left: 2%;
+    animation-delay: 0.6s;
+}
+
+.node-action {
+    bottom: 8%;
+    right: 2%;
+    animation-delay: 1.2s;
+}
+
+@keyframes nodeFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.vla-beam {
+    position: absolute;
+    background: var(--color-black);
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.beam-vision {
+    width: 2px;
+    height: 22%;
+    top: 22%;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.beam-language {
+    height: 2px;
+    width: 26%;
+    top: 58%;
+    left: 22%;
+    transform: rotate(38deg);
+    transform-origin: left center;
+}
+
+.beam-action {
+    height: 2px;
+    width: 26%;
+    top: 58%;
+    right: 22%;
+    transform: rotate(-38deg);
+    transform-origin: right center;
+}
+
+/* ====================== */
+/* R³L1NK SECTION         */
+/* ====================== */
+.r3link-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.r3link-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-silver-dark), transparent);
+}
+
+.r3link-section .product-label {
+    background: var(--color-silver);
+}
+
+.r3link-section .feature-tag {
+    background: var(--color-silver);
+    border-color: transparent;
+}
+
+.r3link-section .feature-tag:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+    border-color: var(--color-black);
+}
+
+.r3link-section .ring-center::after {
+    background: var(--color-white);
+}
+
 /* ====================== */
 /* CAPABILITIES SECTION   */
 /* ====================== */
@@ -807,8 +983,22 @@ footer {
         order: -1;
     }
     
-    .product-graphic {
+    .product-graphic,
+    .vla-graphic {
         max-width: 280px;
+    }
+
+    .vla-node {
+        width: 58px;
+        height: 58px;
+    }
+
+    .vla-node span {
+        font-size: 0.58rem;
+    }
+
+    .node-vision {
+        margin-left: -29px;
     }
     
     .product-content {
