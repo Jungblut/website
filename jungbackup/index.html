@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>Jung Backup | Jungblut Robotics</title>
+    <meta name="description"
+        content="Jung Backup is a GNOME backup app built around a dashboard. Encrypted restic backups, compatible with Déjà Dup.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts: Syne for headers (geometric, futuristic), Outfit for body (clean, modern) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Syne:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="header-left">
+            <img src="../public/jungblut_io_logo.jpg" alt="Jungblut Robotics Logo" class="logo">
+            <div class="company-name">Jungblut <span>Robotics</span></div>
+        </a>
+        <a href="https://github.com/thomasjungblut/jungbackup" target="_blank" class="header-cta">GitHub</a>
+    </header>
+
+    <main class="jb-page">
+        <!-- Intro -->
+        <section class="jb-intro">
+            <img src="logo.svg" alt="Jung Backup logo" class="jb-logo">
+            <span class="product-label">Open Source · GNOME</span>
+            <h1 class="product-name">Jung Backup</h1>
+            <p class="product-tagline">Back up your files and see how your backups are doing</p>
+            <p class="jb-lead">
+                A backup app built around a dashboard: how big the backup is, how old it is, how long the
+                last run took, how many files changed, and live throughput, CPU and memory use while a
+                backup runs.
+            </p>
+            <div class="jb-actions">
+                <a href="https://github.com/thomasjungblut/jungbackup/releases/download/continuous/jungbackup-x86_64.flatpak"
+                    class="cta-button">
+                    Download Flatpak
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="https://github.com/thomasjungblut/jungbackup" target="_blank" class="cta-button jb-secondary">
+                    Source on GitHub
+                </a>
+            </div>
+            <p class="jb-note">
+                Latest build for x86_64 · also for
+                <a href="https://github.com/thomasjungblut/jungbackup/releases/download/continuous/jungbackup-aarch64.flatpak">ARM (aarch64)</a>
+            </p>
+        </section>
+
+        <!-- Highlights -->
+        <section class="jb-highlights">
+            <div class="capability-card">
+                <h3>Dashboard First</h3>
+                <p>Size, age, duration and changed files at a glance, with charts and a snapshot history.
+                    Restore and settings stay out of the way until you need them.</p>
+            </div>
+            <div class="capability-card">
+                <h3>Déjà Dup Compatible</h3>
+                <p>Import Déjà Dup's settings on first start. Both apps use the same restic snapshots, so
+                    either one can restore or prune the other's backups.</p>
+            </div>
+            <div class="capability-card">
+                <h3>Back Up Anywhere</h3>
+                <p>Local disks, USB drives, network shares, SFTP servers, Google Drive or any rclone
+                    remote. Encrypted and deduplicated by restic.</p>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="jb-carousel" aria-roledescription="carousel" aria-label="Screenshots">
+            <div class="jb-track" id="jb-track">
+            <figure>
+                <img src="dashboard.png" alt="Jung Backup dashboard showing backup size, snapshots and charts"
+                    width="1000" height="820" loading="lazy">
+                <figcaption>The dashboard shows the health and history of your backups</figcaption>
+            </figure>
+            <figure>
+                <img src="backing-up.png" alt="Jung Backup during a running backup with live throughput"
+                    width="1000" height="820" loading="lazy">
+                <figcaption>Live progress, throughput and resource use while backing up</figcaption>
+            </figure>
+            <figure>
+                <img src="restore.png" alt="Jung Backup restore view with a snapshot timeline and selected files"
+                    width="1000" height="820" loading="lazy">
+                <figcaption>Step back through snapshots on a timeline and restore just the files you need</figcaption>
+            </figure>
+            <figure>
+                <img src="settings.png" alt="Jung Backup settings with schedule, storage location and folders"
+                    width="1000" height="820" loading="lazy">
+                <figcaption>Set the schedule, how long to keep backups, where they go and what to include</figcaption>
+            </figure>
+            <figure>
+                <img src="welcome.png" alt="Jung Backup welcome screen offering to import from Déjà Dup"
+                    width="1000" height="700" loading="lazy">
+                <figcaption>Get started by importing your Déjà Dup settings</figcaption>
+            </figure>
+            </div>
+            <button class="jb-nav jb-prev" aria-label="Previous screenshot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button class="jb-nav jb-next" aria-label="Next screenshot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </button>
+            <div class="jb-dots" id="jb-dots"></div>
+        </section>
+        <script>
+            (function () {
+                const track = document.getElementById('jb-track');
+                const slides = Array.from(track.children);
+                const dotsBox = document.getElementById('jb-dots');
+                let current = 0;
+
+                const dots = slides.map(function (_, i) {
+                    const dot = document.createElement('button');
+                    dot.setAttribute('aria-label', 'Screenshot ' + (i + 1));
+                    dot.addEventListener('click', function () { go(i); });
+                    dotsBox.appendChild(dot);
+                    return dot;
+                });
+
+                function go(i) {
+                    current = (i + slides.length) % slides.length;
+                    track.scrollTo({ left: current * track.clientWidth, behavior: 'smooth' });
+                }
+
+                function mark() {
+                    current = Math.round(track.scrollLeft / track.clientWidth);
+                    dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+                }
+
+                document.querySelector('.jb-prev').addEventListener('click', function () { go(current - 1); });
+                document.querySelector('.jb-next').addEventListener('click', function () { go(current + 1); });
+                track.addEventListener('scroll', mark, { passive: true });
+                mark();
+            })();
+        </script>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../public/jungblut_io_logo.jpg" alt="Jungblut Robotics" class="footer-logo">
+                <span class="footer-company">Jungblut Robotics</span>
+            </div>
+
+            <nav class="footer-links">
+                <a href="../imprint.html">Imprint</a>
+                <a href="pp/">Privacy</a>
+                <a href="mailto:thomas@jungblut.io">Contact</a>
+            </nav>
+
+            <p class="footer-copyright">
+                © 2026 Jungblut Robotics. Jung Backup is licensed under Apache 2.0.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

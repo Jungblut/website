@@ -894,6 +894,203 @@ html:has(.imprint-page) {
 }
 
 /* ====================== */
+/* JUNG BACKUP PAGE       */
+/* ====================== */
+html:has(.jb-page) {
+    scroll-snap-type: none;
+}
+
+.jb-page {
+    padding: 8rem 2rem 6rem;
+    background: var(--color-silver);
+}
+
+.jb-intro {
+    max-width: 720px;
+    margin: 0 auto 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jb-logo {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 2rem;
+}
+
+.jb-lead {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-black-soft);
+    margin-bottom: 2.5rem;
+}
+
+.jb-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.jb-note {
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--color-gray);
+}
+
+.jb-note a {
+    color: var(--color-black);
+    text-underline-offset: 3px;
+}
+
+.jb-secondary {
+    background: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-silver-dark);
+}
+
+.jb-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 5rem;
+}
+
+.jb-highlights .capability-card {
+    background: var(--color-white);
+}
+
+.jb-carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.jb-track {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    /* room for the screenshot shadow, which overflow would clip */
+    padding: 2rem 0 3rem;
+}
+
+.jb-track::-webkit-scrollbar {
+    display: none;
+}
+
+.jb-track figure {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    padding: 0 1rem;
+}
+
+.jb-track img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.jb-track figcaption {
+    margin-top: 1.25rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--color-gray);
+}
+
+.jb-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-silver-dark);
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.jb-nav:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.jb-nav svg {
+    width: 20px;
+    height: 20px;
+}
+
+.jb-prev {
+    left: -3.5rem;
+}
+
+.jb-next {
+    right: -3.5rem;
+}
+
+/* not enough room beside the screenshots: tuck the arrows over the edges */
+@media (max-width: 1150px) {
+    .jb-prev {
+        left: 0;
+    }
+
+    .jb-next {
+        right: 0;
+    }
+}
+
+.jb-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.jb-dots button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-silver-dark);
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.jb-dots button.active {
+    width: 28px;
+    border-radius: 100px;
+    background: var(--color-black);
+}
+
+@media (max-width: 900px) {
+    .jb-page {
+        padding: 6rem 1rem 4rem;
+    }
+
+    .jb-highlights {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    /* swipe on small screens; arrows would cover the screenshot */
+    .jb-nav {
+        display: none;
+    }
+}
+
+/* ====================== */
 /* FOOTER                 */
 /* ====================== */
 footer {
